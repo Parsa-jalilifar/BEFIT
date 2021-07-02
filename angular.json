@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "BEFIT"
+    }
+  },
+  "defaultProject": "BEFIT",
+  "cli": {
+    "analytics": false
+  }
 }
