@@ -79,3 +79,9 @@
     }
   }
 }
+
+@media screen and (max-width: 765px) {
+  .bg-img .header .menu {
+    display: none;
+  }
+}
