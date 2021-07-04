@@ -1,0 +1,61 @@
+@import "../../../shared-styles/utils.scss";
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 100%;
+  width: 100%;
+  background-color: #fff;
+  padding: 0.8rem;
+
+  .images {
+    img {
+      max-width: 100%;
+    }
+
+    .front {
+      margin-left: -250px;
+      margin-bottom: -50px;
+    }
+  }
+  .content {
+    max-width: 100%;
+    margin-left: 2rem;
+    margin-top: 4rem;
+
+    h1 {
+      position: relative;
+      line-height: 3rem;
+      margin-bottom: 1rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 5rem;
+        height: 3px;
+
+        background-color: $darkRed;
+        border-radius: 5px;
+      }
+    }
+
+    p {
+      width: 500px;
+      max-width: 100%;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .about-container .images .front {
+    display: none;
+  }
+  .about-container .content{
+    margin-top: 0;
+  }
+}
