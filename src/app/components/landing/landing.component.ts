@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-landing',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
+
+  faDumbbell = faDumbbell;
 
   constructor() { }
 
