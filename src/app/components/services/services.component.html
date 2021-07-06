@@ -8,7 +8,7 @@
       <div class="service-block" *ngFor="let service of services">
         <div class="flip-block">
           <div class="front">
-            <img src={{service.ImageSrc}} alt={{service.Title}}>
+            <img loading="lazy" src={{service.ImageSrc}} alt={{service.Title}}>
             <h3>{{service.Title}}</h3>
           </div>
           <div class="back">
