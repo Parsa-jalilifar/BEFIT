@@ -78,11 +78,94 @@
           padding-top: 2.4rem;
 
           a {
+            position: relative;
             color: black;
             text-decoration: none;
             border: 1px solid #000;
             padding: 0.5rem;
             border-radius: 5px;
+            overflow: hidden;
+            z-index: 1;
+
+            &:nth-child(1)::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 10px;
+              height: 10px;
+              opacity: 0;
+              border-radius: 50%;
+              background: #e1306c;
+              z-index: -1;
+              transition: all 600ms ease-in;
+            }
+
+            &:nth-child(1):hover:after {
+              opacity: 1;
+              transform: scale(10);
+            }
+
+            &:nth-child(2)::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 10px;
+              height: 10px;
+              opacity: 0;
+              border-radius: 50%;
+              background: #28b2a9;
+              z-index: -1;
+              transition: all 600ms ease-in;
+            }
+
+            &:nth-child(2):hover:after {
+              opacity: 1;
+              transform: scale(10);
+            }
+
+            &:nth-child(3)::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 10px;
+              height: 10px;
+              opacity: 0;
+              border-radius: 50%;
+              background: #4267b2;
+              z-index: -1;
+              transition: all 600ms ease-in;
+            }
+
+            &:nth-child(3):hover:after {
+              opacity: 1;
+              transform: scale(10);
+            }
+
+            &:nth-child(4)::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 10px;
+              height: 10px;
+              opacity: 0;
+              border-radius: 50%;
+              background: #1da1f2;
+              z-index: -1;
+              transition: all 600ms ease-in;
+            }
+
+            &:nth-child(4):hover:after {
+              opacity: 1;
+              transform: scale(10);
+            }
 
             &:not(:last-child) {
               margin-right: 1rem;
