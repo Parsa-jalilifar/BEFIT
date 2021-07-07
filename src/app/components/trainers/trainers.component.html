@@ -1,0 +1,42 @@
+<div class="trainers-container">
+
+  <div class="trainers__title">
+    <h1>Team of Expert</h1>
+  </div>
+  <div class="trainer__box">
+
+    <div class="trainer" *ngFor="let trainer of trainers">
+
+      <img class="trainer__image" loading="lazy" src={{trainer.ImageSrc}} width="400px" height="470px"
+        alt=`{{trainer.Name}}_profile_image`>
+
+      <div class="trainer__info">
+
+        <h5>{{trainer.Profession}}</h5>
+        <h2>{{trainer.Name}}</h2>
+
+        <div class="social-box">
+
+          <a href="">
+            <fa-icon [icon]="instaIcon"></fa-icon>
+          </a>
+
+          <a href="">
+            <fa-icon [icon]="linIcon"></fa-icon>
+          </a>
+
+          <a href="">
+            <fa-icon [icon]="facebookIcon"></fa-icon>
+          </a>
+
+          <a href="">
+            <fa-icon [icon]="twitterIcon"></fa-icon>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
