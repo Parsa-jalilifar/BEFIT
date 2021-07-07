@@ -96,12 +96,23 @@
             backface-visibility: hidden;
 
             p {
-              font-size: 1.2rem;
+              font-size: 1.2em;
               font-weight: 500;
             }
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 651px) {
+  .bg-img-service .service-pos .service-container {
+    grid-template-columns: repeat(auto-fit, minMax(150px, 1fr));
+    gap: 0.5rem;
+
+    .service-block .flip-block .front h3 {
+      font-size: 1em;
     }
   }
 }
