@@ -1,0 +1,72 @@
+<div class="bmi-container">
+  <div class="bmi__form">
+    <h1><span>Calculate Your</span>
+      Body Mass Index</h1>
+
+
+    <input type="radio" name="BMI_form_Selector" id="bmi_metric" checked>
+    <label for="bmi_metric">Metric</label>
+
+    <input type="radio" name="BMI_form_Selector" id="bmi_imperial">
+    <label for="bmi_imperial">Imperial</label>
+
+
+    <form class="bmi_metric_form">
+      <div class="form_group">
+        <input type="number" #metric_height id="bmi_height" placeholder="CM" min="0">
+        <label for="bmi_height">Height</label>
+      </div>
+
+      <div class="form_group">
+        <input type="number" #metric_weight id="bmi_weight" placeholder="KG" min="0">
+        <label for="bmi_weight">Weight</label>
+      </div>
+
+      <input (click)=" BMI_Metric_Calculator(metric_weight.value,metric_height.value)" type="button" value="Calculate">
+    </form>
+
+    <form class="bmi_imperial_form">
+
+      <div class="form_group">
+        <input type="number" #imperial_height_in id="bmi_height_in" placeholder="IN" min="0">
+        <label for="bmi_height_in">Height</label>
+      </div>
+
+      <div class="form_group">
+        <input type="number" #imperial_weight_p id="bmi_weight_p" placeholder="LB" min="0">
+        <label for="bmi_weight_p">Weight</label>
+      </div>
+
+      <input (click)=" BMI_Imperial_Calculator(imperial_weight_p.value,imperial_height_in.value)" type="button"
+        value="Calculate">
+    </form>
+    <strong *ngIf="BMI">Your Calculated BMI is : <span>{{BMI}}</span></strong>
+  </div>
+
+  <table class="bmi__table">
+    <thead>
+      <tr>
+        <th>BMI</th>
+        <th>WEIGHT STATUS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Below 18.5</td>
+        <td>Underweight</td>
+      </tr>
+      <tr>
+        <td>18.5 - 24.9</td>
+        <td>Healthy</td>
+      </tr>
+      <tr>
+        <td>25.0 - 29.9</td>
+        <td>Overweight</td>
+      </tr>
+      <tr>
+        <td>30.0 - and Above</td>
+        <td>Obese</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

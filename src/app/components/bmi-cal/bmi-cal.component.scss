@@ -1,0 +1,136 @@
+@import "../../../shared-styles/utils.scss";
+
+.bmi-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  padding: 4rem 0.8rem;
+  width: 100%;
+  min-height: 25%;
+  color: white;
+  background: $lightRed;
+
+  .bmi__form {
+    position: relative;
+    width: 400px;
+    margin-right: 3rem;
+
+    strong {
+      position: relative;
+      bottom: -0.6rem;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+
+      span {
+        display: block;
+      }
+    }
+
+    label {
+      margin-right: 0.4rem;
+      margin-left: 0.4rem;
+    }
+
+    #bmi_metric:checked ~ .bmi_imperial_form {
+      display: none;
+    }
+
+    #bmi_imperial:checked ~ .bmi_metric_form {
+      display: none;
+    }
+
+    .bmi_metric_form,
+    .bmi_imperial_form {
+      .form_group {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5rem;
+
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        /* Firefox */
+        input[type="number"] {
+          -moz-appearance: textfield;
+          padding: 0.6rem;
+          background-color: $darkRed;
+          border: 2px solid white;
+          color: white;
+          outline: none;
+          letter-spacing: 1px;
+
+          &::placeholder {
+            color: white;
+            font-weight: bold;
+            opacity: 1 !important;
+          }
+        }
+      }
+      input[type="button"] {
+        position: absolute;
+        cursor: pointer;
+        right: 0;
+        padding: 0.6rem 0.8rem;
+        color: white;
+        background: #000;
+        border: none;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .bmi__table {
+    width: 320px;
+    color: black;
+    background: white;
+    text-align: left;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+    padding: 0.8rem;
+
+    thead th {
+      padding: 0.8rem;
+      border-bottom: 1px solid #ddd;
+
+      &:first-child {
+        border-right: 1px solid #ddd;
+      }
+    }
+
+    tbody tr {
+      &:not(:last-child) {
+        td {
+          border-bottom: 1px solid #ddd;
+        }
+      }
+
+      td:first-child {
+        border-right: 1px solid #ddd;
+      }
+
+      td {
+        padding: 0.8rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .bmi-container .bmi__table {
+    margin-bottom: 3rem;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .bmi-container .bmi__form {
+    margin-right: 0;
+  }
+}
