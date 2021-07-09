@@ -1,0 +1,27 @@
+<div class="plans-container">
+  <div class="title">
+    <h1>Membership Plans</h1>
+  </div>
+
+  <div class="plans-box">
+    <div class="plan" *ngFor="let plan of plans">
+      <div class="plan-bar"></div>
+
+      <h3> <span>{{plan.membership}}</span> MEMBERSHIP</h3>
+
+      <ul class="bulletBox">
+        <li *ngFor="let benefit of plan.benefits">{{benefit}}</li>
+      </ul>
+
+      <div class="money-box">
+        <p><strong>${{plan.price}}</strong>+tax
+          <span>bi-weekly</span>
+        </p>
+      </div>
+
+      <div class="join">
+        <a href="">join now</a>
+      </div>
+    </div>
+
+  </div>

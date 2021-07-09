@@ -9,6 +9,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
 import { TrainersComponent } from './components/trainers/trainers.component';
 import { BmiCalComponent } from './components/bmi-cal/bmi-cal.component';
+import { PlansComponent } from './components/plans/plans.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BmiCalComponent } from './components/bmi-cal/bmi-cal.component';
     AboutComponent,
     ServicesComponent,
     TrainersComponent,
-    BmiCalComponent
+    BmiCalComponent,
+    PlansComponent
   ],
   imports: [
     BrowserModule,

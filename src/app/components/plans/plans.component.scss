@@ -1,0 +1,106 @@
+@import "../../../shared-styles/utils.scss";
+
+.plans-container {
+  padding: 0.8rem;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      position: relative;
+      line-height: 3rem;
+      margin-bottom: 2rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 5rem;
+        height: 3px;
+        background-color: $darkRed;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .plans-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .plan {
+      padding-bottom: 0.8rem;
+      max-width: 250px;
+      margin: 0.6rem 0.3rem;
+      box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.7);
+
+      .plan-bar {
+        background-color: $darkRed;
+        width: 100%;
+        height: 50px;
+        clip-path: polygon(50% 50%, 100% 20%, 100% 0, 0 0, 0 20%);
+      }
+
+      h3 {
+        text-align: center;
+        font-weight: 800;
+        text-transform: uppercase;
+
+        span {
+          color: $lightRed;
+          display: block;
+        }
+      }
+
+      .bulletBox {
+        width: 75%;
+        margin: 1rem auto;
+        padding: 0.8rem;
+
+        li {
+          line-height: 1.5rem;
+          padding-left: 0.5rem;
+
+          &::marker {
+            content: "✓";
+            font-weight: bold;
+          }
+        }
+      }
+
+      .join {
+        text-align: center;
+
+        a {
+          display: inline-block;
+          text-decoration: none;
+          text-transform: capitalize;
+          color: black;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          font-weight: bold;
+          padding: 0.5rem 1rem;
+          border: 2px solid $darkRed;
+        }
+      }
+    }
+
+    .money-box {
+      width: 75%;
+      background-color: #f5f6f7;
+      margin: auto;
+      p {
+        text-align: center;
+        padding: 1.5rem;
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
