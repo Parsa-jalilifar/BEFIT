@@ -40,7 +40,7 @@
       <input (click)=" BMI_Imperial_Calculator(imperial_weight_p.value,imperial_height_in.value)" type="button"
         value="Calculate">
     </form>
-    <strong *ngIf="BMI">Your Calculated BMI is : <span>{{BMI}}</span></strong>
+    <strong *ngIf="BMI">Your Calculated BMI is : <span>{{BMI | number:"1.0-2"}}</span></strong>
   </div>
 
   <table class="bmi__table">

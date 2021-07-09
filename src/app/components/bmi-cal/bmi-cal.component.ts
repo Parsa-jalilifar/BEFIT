@@ -17,11 +17,11 @@ export class BmiCalComponent implements OnInit {
 
   BMI_Metric_Calculator(KG: number, CM: number) {
     if (KG && CM)
-      this.BMI = (KG / Math.pow(CM / 100, 2)).toFixed(2);
+      this.BMI = (KG / Math.pow(CM / 100, 2)).toString();
   }
 
   BMI_Imperial_Calculator(LB: number, IN: number) {
     if (LB && IN)
-      this.BMI = ((LB / Math.pow(IN, 2)) * 703).toFixed(2);
+      this.BMI = ((LB / Math.pow(IN, 2)) * 703).toString();
   }
 }
