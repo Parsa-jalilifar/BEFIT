@@ -1,0 +1,212 @@
+@import "../../../shared-styles/utils.scss";
+
+.contact-container {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.8rem;
+  min-height: 500px;
+  width: 100%;
+  color: white;
+  background-color: $lightBlack;
+  letter-spacing: 1px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0rem;
+    right: 0.8rem;
+    left: 0.8rem;
+    border-bottom: 2px solid white;
+  }
+
+  .info-container {
+    height: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      .ng-fa-icon {
+        margin-right: 0.6rem;
+        font-size: 2rem;
+      }
+    }
+
+    .box-info {
+      display: inline-flex;
+      flex-direction: column;
+      margin-top: 2rem;
+
+      a {
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 200ms ease-out;
+
+        &:not(:last-child) {
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          margin-left: 0.5rem;
+          border-bottom: 1px solid transparent;
+
+          &:hover {
+            border-bottom-color: white;
+          }
+        }
+      }
+    }
+
+    h3 {
+      margin: 1rem 0;
+    }
+
+    .social-box {
+      max-width: 180px;
+      // margin: 0.7rem 0;
+      display: inline-grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+
+      .icon-box {
+        display: flex;
+        flex-direction: column;
+        p {
+          letter-spacing: 1px;
+          background-color: $lightRed;
+          font-weight: 600;
+        }
+
+        .up-box {
+          order: 1;
+          margin-bottom: 0.4rem;
+          text-align: center;
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out,
+            transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+          padding: 0.4rem 0.4rem 0.8rem 0.4rem;
+          clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            100% 85%,
+            60% 85%,
+            50% 100%,
+            40% 85%,
+            0% 85%
+          );
+        }
+
+        .down-box {
+          margin-top: 0.4rem;
+          text-align: center;
+          opacity: 0;
+          visibility: hidden;
+          padding: 0.8rem 0.4rem 0.4rem 0.4rem;
+          transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out,
+            transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+          clip-path: polygon(
+            0 15%,
+            40% 15%,
+            50% 0,
+            60% 15%,
+            100% 15%,
+            100% 100%,
+            0% 100%
+          );
+        }
+
+        .up-icon,
+        .down-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          text-decoration: none;
+          padding: 1rem;
+          background-color: hsl(0, 10%, 15%);
+        }
+
+        .up-icon {
+          order: 2;
+        }
+
+        .up-icon:hover ~ .up-box {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(-5px);
+        }
+        .down-icon:hover ~ .down-box {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(5px);
+        }
+      }
+    }
+  }
+
+  .time-table {
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+
+    table {
+      border: 1px solid white;
+      border-collapse: collapse;
+
+      tbody {
+        tr {
+          td {
+            padding: 1rem;
+            text-align: center;
+          }
+
+          &:nth-child(even) {
+            background-color: hsl(0, 10%, 15%);
+          }
+        }
+      }
+    }
+  }
+
+  .contact-form-container {
+    height: 100%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        margin-bottom: 1rem;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        padding: 0.5rem;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+    }
+  }
+}
