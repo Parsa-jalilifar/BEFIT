@@ -74,6 +74,9 @@
         }
       }
       input[type="button"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         position: absolute;
         cursor: pointer;
         right: 0;

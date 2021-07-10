@@ -211,11 +211,13 @@
       }
 
       input[type="submit"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         padding: 1rem;
         color: white;
         background-color: hsl(0, 10%, 15%);
         border: 1px solid whtie;
-
       }
     }
   }
