@@ -193,8 +193,9 @@
     form {
       display: flex;
       flex-direction: column;
+      letter-spacing: 1px;
 
-      input {
+      input:not(:last-child) {
         margin-bottom: 1rem;
       }
 
@@ -206,6 +207,15 @@
 
       textarea {
         resize: vertical;
+        margin-bottom: 1rem;
+      }
+
+      input[type="submit"] {
+        padding: 1rem;
+        color: white;
+        background-color: hsl(0, 10%, 15%);
+        border: 1px solid whtie;
+
       }
     }
   }
