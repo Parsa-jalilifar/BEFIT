@@ -10,6 +10,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { TrainersComponent } from './components/trainers/trainers.component';
 import { BmiCalComponent } from './components/bmi-cal/bmi-cal.component';
 import { PlansComponent } from './components/plans/plans.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PlansComponent } from './components/plans/plans.component';
     ServicesComponent,
     TrainersComponent,
     BmiCalComponent,
-    PlansComponent
+    PlansComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

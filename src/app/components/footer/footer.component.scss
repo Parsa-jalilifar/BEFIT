@@ -1,0 +1,27 @@
+@import "../../../shared-styles/utils.scss";
+
+:host {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $lightBlack;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0.8rem 0.8rem auto 0.8rem;
+    border-top: 2px solid white;
+  }
+}
+
+.footer {
+  position: relative;
+  margin-top: 0.8rem;
+  padding: 1rem 0.8rem;
+
+  p {
+    color: white;
+  }
+}
