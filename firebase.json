@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/BEFIT",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
