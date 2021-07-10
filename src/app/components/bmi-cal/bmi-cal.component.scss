@@ -60,6 +60,7 @@
         input[type="number"] {
           -moz-appearance: textfield;
           padding: 0.6rem;
+          font-size: 16px;
           background-color: $darkRed;
           border: 2px solid white;
           color: white;
@@ -69,6 +70,7 @@
           &::placeholder {
             color: white;
             font-weight: bold;
+            font-size: 16px;
             opacity: 1 !important;
           }
         }
@@ -81,6 +83,7 @@
         cursor: pointer;
         right: 0;
         padding: 0.6rem 0.8rem;
+        font-size: 16px;
         color: white;
         background: #000;
         border: none;
