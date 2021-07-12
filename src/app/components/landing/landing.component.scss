@@ -2,6 +2,8 @@
 
 .bg-img {
   position: relative;
+  display: flex;
+  flex-direction: column;
   min-height: 100%;
   width: 100%;
   background-image: url("../../../assets/images/bg_landing.jpg");
@@ -53,15 +55,34 @@
   }
 
   .intro-container {
-    position: absolute;
-    top: 0;
-    height: 100%;
+    // position: absolute;
+    // top: 0;
+    // height: 100%;
     display: flex;
     align-items: center;
+    margin: auto;
     padding: 0.8rem;
 
     .intro-content {
-      max-width: 600px;
+      max-width: 620px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 4em;
+
+      animation: shape 3s linear infinite alternate;
+
+      @keyframes shape {
+        0% {
+          border-radius: 30% 60% 43% 57% / 26% 46% 54%;
+        }
+
+        100% {
+          border-radius: 20% 80% 70% 40% / 30% 52% 48%;
+        }
+      }
 
       h1 {
         font-size: 4rem;
@@ -75,8 +96,10 @@
       .btn-intro {
         color: white;
         text-decoration: none;
+        max-width: 155px;
         padding: 1rem 1.5rem;
         border: 3px solid $darkRed;
+        justify-content: center;
       }
     }
   }
@@ -85,5 +108,12 @@
 @media screen and (max-width: 765px) {
   .bg-img .header .menu {
     display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .bg-img .intro-container .intro-content {
+    background-color: rgba(0, 0, 0, 0.0);
+    padding: 0.8em;
   }
 }
