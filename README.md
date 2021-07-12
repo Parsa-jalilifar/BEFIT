@@ -1,3 +1,7 @@
+### Link to demo
+
+https://befit-96585.firebaseapp.com/
+
 # BEFIT
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
