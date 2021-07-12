@@ -9,6 +9,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
 import { TrainersComponent } from './components/trainers/trainers.component';
 import { BmiCalComponent } from './components/bmi-cal/bmi-cal.component';
+import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { PlansComponent } from './components/plans/plans.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -23,7 +24,8 @@ import { FooterComponent } from './components/footer/footer.component';
     BmiCalComponent,
     PlansComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+     SideMenuComponent
   ],
   imports: [
     BrowserModule,
