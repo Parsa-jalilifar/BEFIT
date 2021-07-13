@@ -140,3 +140,9 @@
     padding: 0.8em;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .bg-img .intro-container .intro-content h1 {
+    font-size: 2.8rem;
+  }
+}
