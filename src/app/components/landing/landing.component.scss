@@ -94,12 +94,35 @@
       }
 
       .btn-intro {
+        position: relative;
         color: white;
         text-decoration: none;
-        max-width: 155px;
         padding: 1rem 1.5rem;
         border: 3px solid $darkRed;
-        justify-content: center;
+        font-weight: 600;
+
+        transition: all 200ms ease-in-out 0.25s;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: -10px;
+          border: 3px solid $darkRed;
+          height: 100%;
+          width: 100%;
+          transition: all 250ms linear;
+          // background: blue;
+        }
+
+        &:hover::before {
+          top: -2px;
+          left: -2.5px;
+        }
+
+        &:hover {
+          background-color: $darkRed;
+        }
       }
     }
   }
@@ -113,7 +136,7 @@
 
 @media screen and (max-width: 550px) {
   .bg-img .intro-container .intro-content {
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0);
     padding: 0.8em;
   }
 }
