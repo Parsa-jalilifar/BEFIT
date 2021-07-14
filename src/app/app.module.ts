@@ -13,6 +13,8 @@ import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { PlansComponent } from './components/plans/plans.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AppRoutingModule } from './app-routing.module';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { FooterComponent } from './components/footer/footer.component';
     PlansComponent,
     FooterComponent,
     ContactComponent,
-     SideMenuComponent
+    SideMenuComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
