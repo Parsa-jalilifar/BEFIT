@@ -89,6 +89,10 @@
         border: none;
         text-transform: capitalize;
         letter-spacing: 1px;
+
+        &:hover{
+          background-color: lighten($color: hsl(0, 0, 0), $amount: 15%);
+        }
       }
     }
   }
