@@ -1,40 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
 import { AppComponent } from './app.component';
-import { LandingComponent } from './components/landing/landing.component';
-import { AboutComponent } from './components/about/about.component';
-import { ServicesComponent } from './components/services/services.component';
-import { TrainersComponent } from './components/trainers/trainers.component';
-import { BmiCalComponent } from './components/bmi-cal/bmi-cal.component';
-import { SideMenuComponent } from './components/side-menu/side-menu.component';
-import { PlansComponent } from './components/plans/plans.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NotFoundComponent } from './components/not-found/not-found.component';
+
+import { HomeModule } from './modules/home/home.module';
+import { NotFoundModule } from './modules/not-found/not-found.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingComponent,
-    AboutComponent,
-    ServicesComponent,
-    TrainersComponent,
-    BmiCalComponent,
-    PlansComponent,
-    FooterComponent,
-    ContactComponent,
-    SideMenuComponent,
-    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule,
-    FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomeModule,
+    NotFoundModule
   ],
   providers: [],
   bootstrap: [AppComponent]

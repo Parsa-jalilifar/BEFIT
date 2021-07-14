@@ -1,4 +1,4 @@
-@import "../../../shared-styles/utils.scss";
+@import "../../../../../styles/variables.scss";
 
 .bg-img-service {
   display: flex;
@@ -6,7 +6,7 @@
   color: white;
   padding: 0.8rem;
   min-height: 100%;
-  background-image: url("../../../assets/images/bg-services.jpg");
+  background-image: url("../../../../../assets/images/bg-services.jpg");
   background-size: cover;
   background-position: center;
 

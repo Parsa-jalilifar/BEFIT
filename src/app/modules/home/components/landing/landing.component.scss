@@ -1,4 +1,4 @@
-@import "../../../shared-styles/utils.scss";
+@import "../../../../../styles/variables.scss";
 
 .bg-img {
   position: relative;
@@ -6,7 +6,7 @@
   flex-direction: column;
   min-height: 100%;
   width: 100%;
-  background-image: url("../../../assets/images/bg_landing.jpg");
+  background-image: url("../../../../../assets/images/bg_landing.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
