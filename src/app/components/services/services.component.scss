@@ -108,11 +108,27 @@
 
 @media screen and (max-width: 651px) {
   .bg-img-service .service-pos .service-container {
-    grid-template-columns: repeat(auto-fit, minMax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minMax(200px, 1fr));
     gap: 0.5rem;
 
     .service-block .flip-block .front h3 {
       font-size: 1em;
     }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .bg-img-service .service-pos .service-container {
+    grid-template-columns: repeat(auto-fit, minMax(150px, 1fr));
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .bg-img-service
+    .service-pos
+    .service-container
+    .service-block:hover
+    .flip-block {
+    transform: rotateY(0deg);
   }
 }
