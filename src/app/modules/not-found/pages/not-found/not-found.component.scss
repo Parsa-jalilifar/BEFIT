@@ -1,0 +1,33 @@
+@import "../../../../../styles/variables.scss";
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.688rem;
+    font-weight: 700;
+    letter-spacing: 1;
+    padding: 0.8rem;
+    background-color: $darkRed;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      background-color: $lightRed;
+    }
+  }
+}
+
+.image-404-holder {
+  width: 700px;
+  max-width: 100%;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
