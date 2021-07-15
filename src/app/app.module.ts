@@ -12,9 +12,9 @@ import { NotFoundModule } from './modules/not-found/not-found.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HomeModule,
-    NotFoundModule
+    AppRoutingModule,
+    NotFoundModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
