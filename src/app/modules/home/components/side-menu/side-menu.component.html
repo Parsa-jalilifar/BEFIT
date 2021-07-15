@@ -9,12 +9,13 @@
   </div>
 
   <div class="menu-option-box">
-    <a href="">Home</a>
-    <a href="">About</a>
-    <a href="">Services</a>
-    <a href="">Trainers</a>
-    <a href="">Plans</a>
-    <a href="">Contact</a>
+    <a pageScroll [pageScrollOffset]="0" pageScrollSpeed="2000" href="#landing">Home</a>
+    <a pageScroll [pageScrollOffset]="-5" pageScrollSpeed="2000" href="#about">About</a>
+    <a pageScroll [pageScrollOffset]="0" pageScrollSpeed="2000" href="#fitness-services">Services</a>
+    <a pageScroll [pageScrollOffset]="0" pageScrollSpeed="2000" href="#trainers">Trainers</a>
+    <a pageScroll [pageScrollOffset]="0" pageScrollSpeed="2000" href="#plans">Plans</a>
+    <a pageScroll [pageScrollOffset]="65" pageScrollSpeed="2000" href="#contact">Contact</a>
+
   </div>
 
 </div>
