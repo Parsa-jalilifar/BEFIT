@@ -5,12 +5,18 @@
       <h1>BEFIT</h1>
     </div>
     <div class="menu">
-      <a pageScroll [pageScrollOffset]="0" pageScrollSpeed="2000" href="#landing">Home</a>
-      <a pageScroll [pageScrollOffset]="-5" pageScrollSpeed="2000" href="#about">About</a>
-      <a pageScroll [pageScrollOffset]="0" pageScrollSpeed="2000" href="#fitness-services">Services</a>
-      <a pageScroll [pageScrollOffset]="0" pageScrollSpeed="2000" href="#trainers">Trainers</a>
-      <a pageScroll [pageScrollOffset]="0" pageScrollSpeed="2000" href="#plans">Plans</a>
-      <a pageScroll [pageScrollOffset]="65" pageScrollSpeed="2000" href="#contact">Contact</a>
+      <a pageScroll [pageScrollOffset]="0" pageScrollSpeed="2000" href="#landing"
+        [ngClass]="menuActive == 1 ? 'active' : 'null'" (click)="setMenuActive(1)">Home</a>
+      <a pageScroll [pageScrollOffset]="-5" pageScrollSpeed="2000" href="#about"
+        [ngClass]="menuActive == 2 ? 'active' : 'null'" (click)="setMenuActive(2)">About</a>
+      <a pageScroll [pageScrollOffset]=" 0" pageScrollSpeed="2000" href="#fitness-services"
+        [ngClass]="menuActive == 3 ? 'active' : 'null'" (click)="setMenuActive(3)">Services</a>
+      <a pageScroll [pageScrollOffset]="0" pageScrollSpeed="2000" href="#trainers"
+        [ngClass]="menuActive == 4 ? 'active' : 'null'" (click)="setMenuActive(4)">Trainers</a>
+      <a pageScroll [pageScrollOffset]="0" pageScrollSpeed="2000" href="#plans"
+        [ngClass]="menuActive == 5 ? 'active' : 'null'" (click)="setMenuActive(5)">Plans</a>
+      <a pageScroll [pageScrollOffset]="65" pageScrollSpeed="2000" href="#contact"
+        [ngClass]="menuActive == 6 ? 'active' : 'null'" (click)="setMenuActive(6)">Contact</a>
     </div>
   </div>
 

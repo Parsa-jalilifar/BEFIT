@@ -8,12 +8,18 @@ import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
 })
 export class LandingComponent implements OnInit {
 
+  menuActive: number = 1;
+
   faDumbbell = faDumbbell;
 
   constructor() { }
 
   ngOnInit(): void {
     this.intersectionObserver();
+  }
+
+  setMenuActive(menuDigit: number) {
+    this.menuActive = menuDigit;
   }
 
   intersectionObserver(): void {

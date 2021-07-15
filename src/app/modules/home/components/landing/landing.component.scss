@@ -55,7 +55,8 @@
         background-position: 100%;
         transition: all 0.4s cubic-bezier(0, 0, 0.23, 1);
 
-        &:hover {
+        &:hover,
+        &.active {
           color: $darkRed;
           background-position: 0;
         }
