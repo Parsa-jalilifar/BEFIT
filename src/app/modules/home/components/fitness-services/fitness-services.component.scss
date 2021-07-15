@@ -13,12 +13,13 @@
   h1 {
     position: relative;
     line-height: 3rem;
-    margin-bottom: 1rem;
+    margin: 5rem auto 1rem;
 
     &::after {
       content: "";
       position: absolute;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       bottom: -10px;
       width: 5rem;
       height: 3px;

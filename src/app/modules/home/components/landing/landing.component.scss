@@ -21,6 +21,13 @@
     justify-content: flex-end;
     padding: 0.8rem;
     background: rgba(0, 0, 0, 0.4);
+    transition: all 200ms ease-in-out;
+    z-index: 800;
+
+    &.move {
+      position: fixed;
+      width: 100%;
+    }
 
     .logo {
       display: flex;
@@ -33,23 +40,25 @@
       }
     }
 
-    .menu a {
-      color: white;
-      text-decoration: none;
-      text-transform: uppercase;
-      margin-right: 0.8rem;
-      font-weight: 600;
-      font-size: 1.25rem;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-image: linear-gradient(to right, $darkRed 50%, white 50%);
-      background-size: 200% 100%;
-      background-position: 100%;
-      transition: all 0.4s cubic-bezier(0, 0, 0.23, 1);
+    .menu {
+      a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-right: 0.8rem;
+        font-weight: 600;
+        font-size: 1.25rem;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(to right, $darkRed 50%, white 50%);
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: all 0.4s cubic-bezier(0, 0, 0.23, 1);
 
-      &:hover {
-        color: $darkRed;
-        background-position: 0;
+        &:hover {
+          color: $darkRed;
+          background-position: 0;
+        }
       }
     }
   }

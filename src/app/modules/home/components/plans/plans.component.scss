@@ -11,7 +11,7 @@
     h1 {
       position: relative;
       line-height: 3rem;
-      margin-bottom: 2rem;
+      margin: 4rem auto 2rem;
 
       &::after {
         content: "";
@@ -31,6 +31,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 2rem;
 
     .plan {
       padding-bottom: 0.8rem;
