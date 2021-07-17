@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ManagerService } from '../../../../shared/services/manager.service'
 
 @Component({
   selector: 'app-plans',
@@ -7,37 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlansComponent implements OnInit {
 
-  plans = [
-    {
-      "membership": "essential",
-      "benefits": [
-        "BEFIT Rewards",
-        "Two classes according to your choice",
-        "One day free use"
-      ],
-      "price": "26.99"
-    },
-    {
-      "membership": "premium",
-      "benefits": [
-        "BEFIT Rewards",
-        "Four classes according to your choice",
-        "adds one of your family member"
-      ],
-      "price": "31.99"
-    },
-    {
-      "membership": "ultimate",
-      "benefits": [
-        "BEFIT Rewards",
-        "All classes according to your choice",
-        "adds all  your family member"
-      ],
-      "price": "36.99"
-    }
-  ];
+  plans = [];
 
-  constructor() { }
+  constructor(_managerService: ManagerService) {
+
+    _managerService.getMemberShipPlans().subscribe(response => this.plans = response)
+
+  }
 
   ngOnInit(): void {
   }
