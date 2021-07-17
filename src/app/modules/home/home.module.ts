@@ -14,6 +14,7 @@ import { BmiCalComponent } from './components/bmi-cal/bmi-cal.component';
 import { PlansComponent } from './components/plans/plans.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { FooterComponent } from './components/footer/footer.component';
     FontAwesomeModule,
     FormsModule,
     NgxPageScrollModule,
+    SharedModule
   ],
   exports: [
     HomeComponent
