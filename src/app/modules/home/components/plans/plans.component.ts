@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Plan } from 'src/app/shared/models/app-model';
 import { ManagerService } from '../../../../shared/services/manager.service'
 
 @Component({
@@ -8,12 +9,10 @@ import { ManagerService } from '../../../../shared/services/manager.service'
 })
 export class PlansComponent implements OnInit {
 
-  plans = [];
+  plans: Plan[];
 
   constructor(_managerService: ManagerService) {
-
-    _managerService.getMemberShipPlans().subscribe(response => this.plans = response)
-
+    _managerService.getMemberShipPlans().subscribe((response) => this.plans = response);
   }
 
   ngOnInit(): void {
