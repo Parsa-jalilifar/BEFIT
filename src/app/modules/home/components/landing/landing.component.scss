@@ -6,6 +6,7 @@
   flex-direction: column;
   min-height: 100%;
   width: 100%;
+  max-width:1600px;
   background-image: url("../../../../../assets/images/bg_landing.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -26,7 +27,8 @@
 
     &.move {
       position: fixed;
-      width: 100%;
+      width: inherit;
+      max-width: inherit;
     }
 
     .logo {
